@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+    
+{% block content %}
+
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/signin.css') }}">
+      <div class="tinted-image">
+        <h1>PennCourseConnect</h1>
+      </div>
+
+    <div id='login'>
+      <p id='login-button'>Sign In</p>
+      <div id='login-form'>
+        <form role='form' action="{{ url_for('signin') }}" method=post>
+            {{ login.hidden_tag() }}
+            <div class='signup-input'>
+              {{ login.email(class_="form-control", placeholder="Email") }}
+            </div>
+            <div class='signup-input'>
+              {{ login.password(class_="form-control", placeholder="Password") }}
+            </div>
+            <div class='hidden-input-field'>
+              {{ login.inLocation }}
+            </div>
+            <button id='login-submit-button'>
+              {{ login.submit.label }}
+            </button>
+          </form>
+      </div>
+    </div>
+
+    <div id='signup'>
+      <p id='signup-button'>Sign Up</p>
+      <div id='signup-form'>
+        <form role='form' action="{{ url_for('signin') }}" method=post>
+          {{ register.hidden_tag() }}
+          <div class='signup-input'>
+            {{ register.firstName(class_="form-control", placeholder="First name") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.lastName(class_="form-control", placeholder="Last name") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.email(class_="form-control", placeholder="Email") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.password(class_="form-control", placeholder="New password") }}
+            <br>
+            {{ register.pwdcheck(class_="form-control", placeholder="Confirm password") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.major(class_="form-control", placeholder="Major") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.year(class_="form-control", placeholder="Year") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.gender }}
+          </div>
+          <div id='course-search'>
+            <input type='text' id='course-input' name='course' placeholder='Search'>
+            <button id='add-class' type='button' style='display:inline-block'>Add</button><br>
+            <div id='course-suggestions-list'></div>
+          </div>
+        <div>
+          <ul id='courseKart'>
+          </ul>
+        </div>
+          <div class='hidden-input-field'>
+            {{ register.courses }}
+          </div>
+          <div class='signup-input'>
+            {{ register.bio(class_="form-control", placeholder="Tell us your life story.") }}
+          </div>
+          <div class='hidden-input-field'>
+            {{ register.upLocation }}
+          </div>
+          <button id='signup-submit-button'>
+            {{ register.submit.label }}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="error-messages">
+          {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    </div>
+    
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/map.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/signin.js') }}"></script>
+{% endblock %}

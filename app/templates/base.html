@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studybuddy</title>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery-1.11.1.js') }}"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/underscore.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/backbone.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/bluebird.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jQueryRotate.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/trie.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/promisifiedAjaxSimple.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/promisifiedAjax.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/appView.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/course.js') }}"></script>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+
+
+    <script type='text/template' id='item-template'>
+      <% if (suggestions.length) { %>
+        <ul class='suggestions'>
+          <% _.each(suggestions, function(suggestion) { %>
+            <li><%= suggestion %></li>
+          <% }); %>
+        </ul>
+      <% } %>
+    </script>
+  </body>
+</html>

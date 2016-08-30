@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studybuddy</title>   
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/test.css') }}">
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery-1.11.1.js') }}"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/underscore.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/backbone.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/bluebird.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/jQueryRotate.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/trie.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/promisifiedAjaxSimple.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/promisifiedAjax.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/appView.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/test.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/menu.js') }}"></script>
+  </head>
+  <body>
+
+    <div id="map-canvas"></div>
+
+    <div id="menu-container">
+      <table cellpadding = "0">
+        <tr>
+          <td id = "menuPicCell">
+            <img id="menuPic" src="{{ url_for('.static', filename='img/white_arrow.png') }}" width='40px' height='40px'>
+          </td>
+        </tr>
+      </table>
+      <table id='menu'>
+        <tr class="menuRow">
+          <td id="edit-profile" height = "40">Edit Profile</td>
+        </tr>
+        <tr class="menuRow">
+          <td height = "40">Message</td>
+        </tr>
+        <tr class="menuRow">
+          <td height = "40">Study Habits</td>
+        </tr>
+        <tr class="menuRow">
+          <td height = "40">Settings</td>
+        </tr>
+        <tr class="menuRow">
+          <td id = "logout" height = "40">Log Out</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="filter-bar">
+      <table style='margin:auto;'>
+        <tr>
+          <td>
+            <div id='course-filter-search'>
+              <input type='text' id='course-filter-input' name='course-filter' placeholder='Filter by class...'>
+              <div id='course-filter-suggestions-list'></div>
+            </div>
+          </td>
+          <td>
+            <button id='filter-button'>Filter</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script type='text/template' id='item-template'>
+      <% if (suggestions.length) { %>
+        <ul class='suggestions'>
+          <% _.each(suggestions, function(suggestion) { %>
+            <li><%= suggestion %></li>
+          <% }); %>
+        </ul>
+      <% } %>
+    </script>
+    <script type="text/javascript" src="{{ url_for('.static', filename='js/map.js') }}"></script>
+  </body>
+</html>

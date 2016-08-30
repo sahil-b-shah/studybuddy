@@ -1,0 +1,56 @@
+{% extends "signIn.html" %}
+
+{% block content %}
+    <div id='signup'>
+      <p id='signup-button'>Sign Up</p>
+      <div id='signup-form'>
+        <form role='form' action="{{ url_for('new_user') }}" method=post>
+          {{ register.hidden_tag() }}
+          <div class='signup-input'>
+            {{ register.firstName(class_="form-control", placeholder="First name") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.lastName(class_="form-control", placeholder="Last name") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.email(class_="form-control", placeholder="Email") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.password(class_="form-control", placeholder="New password") }}
+            <br>
+            {{ register.pwdcheck(class_="form-control", placeholder="Confirm password") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.major(class_="form-control", placeholder="Major") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.year(class_="form-control", placeholder="Year") }}
+          </div>
+          <div class='signup-input'>
+            {{ register.gender }}
+          </div>
+          <div id='course-search'>
+            <input type='text' id='course-input' name='course' placeholder='Search'>
+            <button id='add-class' type='button' style='display:inline-block'>Add</button><br>
+            <div id='course-suggestions-list'></div>
+          </div>
+        <div>
+          <ul id='courseKart'>
+          </ul>
+        </div>
+          <div class='hidden-input-field'>
+            {{ register.courses }}
+          </div>
+          <div class='signup-input'>
+            {{ register.bio(class_="form-control", placeholder="Tell us your life story.") }}
+          </div>
+          <div class='hidden-input-field'>
+            {{ register.upLocation }}
+          </div>
+          <button id='signup-submit-button'>
+            {{ register.submit.label }}
+          </button>
+        </form>
+      </div>
+    </div>
+{% endblock %}

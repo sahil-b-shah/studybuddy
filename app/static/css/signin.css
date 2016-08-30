@@ -1,0 +1,225 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions {
+  width: 75%;
+  margin: auto;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.suggestions li {
+  padding: 1px 3px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+#login {
+	position: fixed;
+	left: 8%;
+	top: 15%;
+	height: 30px;
+}
+
+#login-button {
+	width: 100%;
+	color: white;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: transparent;
+	padding: 6px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+#login-form {
+	background-color: #edf0f5;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	width: 100%;
+	margin-top: -9%;
+	display: none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#login-submit-button {
+	color: white;
+	width: 100%;
+	font-family: 'Arial', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: gray;
+	cursor: pointer;
+	text-align: center;
+}
+
+.form-control {
+	font-family: 'Arial', sans-serif;
+	font-size: 15px;
+	width:100%;
+}
+
+#signup {
+	position: fixed;
+	left: 20%;
+	top: 15%;
+	height: 30px;
+}
+
+#signup-button {
+	width: 100%;
+	color: white;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	font-family: 'Arial', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: transparent;
+	padding: 6px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+#signup-form {
+	background-color: #edf0f5;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	width: 105%;
+	margin-top: -7%;
+	display: none;
+	border: 1px solid #4387fd;
+	border-color: solid navy;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.signup-input {
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 85%;
+	font-family: 'Lucida Grande', sans-serif;
+	font-size: 14px;
+}
+
+
+.radio-toolbar {
+	margin: auto;
+    width: 90%;
+    padding-left: 15%;
+}
+
+.radio-toolbar label {
+    font-family: 'Lucida Grande', sans-serif;
+    font-size:14px;
+}
+
+#add-class {
+	color: white;
+	font-family: 'Arial', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: gray;
+	text-align: center;
+}
+
+#course-input {
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 65%;
+	font-family: 'Lucida Grande', sans-serif;
+	font-size: 14px;
+}
+
+.remove-course-from-kart {
+	font-size: 14px;
+	float: right;
+	color: red;
+	cursor: pointer;
+}
+
+.course-kart-item {
+	font-size: 10px;
+	padding: 5px;
+	width: 70%;
+	margin: auto;
+}
+
+#bio {
+	margin-left: 5%;
+	width: 85%;
+	font-family: 'Lucida Grande', sans-serif;
+	font-size: 14px;
+	margin-top: 5%
+}
+
+#signup-submit-button {
+	margin-top:  5%;
+	width: 100%;
+	color: white;
+	font-family: 'Arial', sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+	background-color: gray;
+	text-align: center;
+}
+
+#gender li {
+	display: inline-block;
+}
+
+.hidden-input-field {
+	display: none;
+}
+
+.tinted-image {
+	width: 100%;
+  	height: 100%;
+  	background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */
+    url(https://www.sas.upenn.edu/tetlock/sites/www.sas.upenn.edu.tetlock/files/upenn.jpg);
+}
+
+h1 { 
+   position: absolute; 
+   top: 4%; 
+   left: 8%; 
+   width: 100%; 
+   color: white;
+   font-family: 'Arial', sans-serif;
+   font-size: 50px;
+}
+
+.course-hover {
+	background-color: #e9e9e9;
+}
